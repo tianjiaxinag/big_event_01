@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body,
@@ -9,6 +10,7 @@ html {
     height: 100%;
     background: url('/assets/images/login_bg.jpg') no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .header {
@@ -30,4 +32,73 @@ html {
     width: 100%;
     height: 60px;
     background: url(/assets/images/login_title.png) no-repeat center;
+}
+
+
+/* 登录界面 */
+.login-form {
+    width: 400px;
+    height: 178px;
+    /* background-color: aqua; */
+}
+
+.layui-form-item {
+    position: relative;
+    width: 340px;
+    height: 38px;
+}
+
+.layui-form-item input {
+    width: 100%;
+    height: 38px;
+    float: left;
+    margin-left: 32px;
+    text-indent: 2em;
+    border: 1px solid #e6e6e6;
+}
+
+.layui-form-item input:nth-child(2):focus {
+    border: 1px solid #ff8159;
+}
+
+.layui-form-item i {
+    /* display: block; */
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    top: 10px;
+    left: 40px;
+    font-weight: 700;
+}
+
+.layui-form-item button {
+    width: 100%;
+    height: 38px;
+    background-color: #1E9FFF;
+    float: left;
+    margin-left: 32px;
+    border: 0;
+    color: #fff;
+
+}
+
+.layui-form-item button:hover {
+    cursor: pointer;
+    background-color: #4bb2ff;
+}
+
+.reglink {
+    float: left;
+    margin-left: 32px;
+}
+
+.reglink a {
+    float: right;
+    width: 70px;
+    height: 20px;
+    text-align: right;
+}
+
+.i1 {
+    display: none;
 }

@@ -8,6 +8,8 @@
     <title>大事件登录</title>
     <!-- 先引入layui 文件-->
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css">
     <!-- 在引入自己的css -->
     <link rel="stylesheet" href="/assets/css/login.css">
 </head>
@@ -24,8 +26,31 @@
         <div class="title">
         </div>
         <!-- 中 -->
+        <div class="login-form">
+            <div class="layui-form-item">
+                <i class="iconfont icon-user"></i>
+                <input type="text" placeholder="请输入用户名">
+            </div>
+            <div class="layui-form-item">
+                <input type="text" placeholder="请输入密码">
+            </div>
+            <div class="layui-form-item i1">
+                <input type=" text" placeholder="请确认密码">
+            </div>
+            <div class="layui-form-item">
+                <button>登录</button>
+            </div>
+            <div class="layui-form-item reglink">
+                <a href="#" style="display: none;">去登录</a>
+                <a href="#">去注册账号</a>
+            </div>
+
+        </div>
         <!-- 下 -->
     </div>
+    <!-- 引入jq -->
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>
