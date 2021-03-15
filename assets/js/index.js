@@ -1,6 +1,19 @@
 $(function () {
+    getUserinfo();
 
-    getUserinfo()
+    // 点击退出  退出登录
+    let layer = layui.layer
+    $('#loginout').on('click', function () {
+        // console.log(1);
+        layer.confirm('是否确认退出登录?', { icon: 3, title: '提示' }, function (index) {
+            //do something
+            // 本地销毁token
+            localStorage.removeItem('token');
+            // 跳转页面
+            location.href = '/login.html'
+            layer.close(index);
+        });
+    })
 });
 
 
@@ -12,14 +25,14 @@ function getUserinfo() {
         url: '/my/userinfo',
         data: {},
         // 请求头
-        headers: {
-            Authorization: localStorage.getItem('token')
-        },
+        // headers: {
+        //     Authorization: localStorage.getItem('token')
+        // },
         success: function (res) {
             console.log(res);
-
             get(res);
         }
+
     })
 };
 
@@ -38,7 +51,7 @@ function get(res) {
     if (url != null) {
         // 隐藏文字头像
         $('.text-avatar').hide()
-        $('.layui-nav-img').attr('url', url)
+        $('.layui-nav-img').attr('src', url)
     } else {
         $('.layui-nav-img').hide();
         $('.text-avatar').html(res.data.username[0].toUpperCase())
