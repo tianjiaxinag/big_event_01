@@ -17,7 +17,6 @@ function getUserinfo() {
         },
         success: function (res) {
             console.log(res);
-
             get(res);
         }
     })
