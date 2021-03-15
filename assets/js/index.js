@@ -5,6 +5,7 @@ $(function () {
     let layer = layui.layer
     $('#loginout').on('click', function () {
         // console.log(1);
+        // 弹出层
         layer.confirm('是否确认退出登录?', { icon: 3, title: '提示' }, function (index) {
             //do something
             // 本地销毁token
@@ -42,7 +43,7 @@ function get(res) {
         return layui.layer.msg('信息错误', { icon: 4 });
     }
     // 渲染名称
-    console.log(11111, res.data);
+    // console.log(11111, res.data);
     let name = res.data.nickname || res.data.username;
     $('.welcome').html('欢迎' + name);
     // 渲染头像

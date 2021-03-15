@@ -19,12 +19,12 @@ $.ajaxPrefilter(function (origin) {
         origin.complete = function (res) {
             // console.log(res.responseJSON);
             let obj = res.responseJSON;
-            if (obj.status === 1 && "身份认证失败！") {
-                // 跳转页面
-                location.href = '/login.html'
-                // 本地销毁token
-                localStorage.removeItem('token');
-            }
+            // if (obj.status == 1 && "身份认证失败！") {
+            //     // 跳转页面
+            //     location.href = '/login.html'
+            //     // 本地销毁token
+            //     localStorage.removeItem('token');
+            // }
         }
     };
 })
